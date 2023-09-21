@@ -73,7 +73,7 @@ namespace ClinicApp.XamlPages
                     status = false;
                     messageBuilder.Append("Дата рождения - обязательное поле для ввода.\n");
                 }
-                if (dateOfBirth >= DateTime.Now)
+                if (dateOfBirth >= DateTime.Now || dateOfBirth < new DateTime(1753, 1, 1))
                 {
                     status = false;
                     messageBuilder.Append("Дата рождения некорректна.\n");
